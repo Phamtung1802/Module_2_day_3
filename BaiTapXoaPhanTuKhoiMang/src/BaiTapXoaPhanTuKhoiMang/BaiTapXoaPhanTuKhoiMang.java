@@ -18,14 +18,24 @@ public class BaiTapXoaPhanTuKhoiMang {
         }
     }
 
+    public static boolean check(int[] array, int ele) {
+        boolean a=false;
+        for (int j = 0; j < array.length; j++) {
+            if(ele==array[j]){
+                a=true;
+            }
+        }
+        return a;
+    }
+
     public static int[] DeleteElement(int[] array) {
         Scanner input = new Scanner(System.in);
         int phanTuMuonXoa = 0;
         do {
             System.out.println("enter element you want to delete");
             phanTuMuonXoa = input.nextInt();
-            if (phanTuMuonXoa > array.length && phanTuMuonXoa < 0) System.out.println("index must be within array");
-        } while (phanTuMuonXoa > (array.length - 1) && phanTuMuonXoa < 0);
+            if (check(array,phanTuMuonXoa)==false) System.out.println("element must be within array");
+        } while (check(array,phanTuMuonXoa)==false);
         for (int i = 0; i < array.length; i++) {
             if (array[i] == phanTuMuonXoa) {
                 array[i] = 0;
