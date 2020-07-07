@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BaiTapThemPhanTuVaoMang {
     public static void main(String[] args) {
-        int[] arr = {4, 12, 12, 7, 8, 0, 0, 0, 0, 0, 0};
+        int[] arr = {4, 12, 12, 7, 8, 39, 12, 14, 3, 9, 0};
         printArray(arr);
         addElement(arr);
         printArray(arr);
